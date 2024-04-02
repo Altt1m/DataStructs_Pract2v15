@@ -174,7 +174,11 @@ void Task1()
     {
         if (c->data < 0)
         {
-            if (c == head)
+            if (c == head && c == end)
+            {
+                head = end = c = DeleteNode(c);
+            }
+            else if (c == head)
             {
                 head = c = DeleteNode(c);
             }
