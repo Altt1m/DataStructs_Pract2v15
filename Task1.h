@@ -137,7 +137,7 @@ void Task1()
     Node* head = NULL, * end = NULL, * c;
     int x;
     cout << "Input 5 elements:" << endl;
-    for (int i = 1; i <= 5; i++)
+    for (int i = 1; i <= 5; i++) // 1
     {
         cin >> x;
         if (head == NULL)
@@ -151,12 +151,11 @@ void Task1()
 
     // Вставка числа 25 перед кожним елементом з додатним значенням
     c = head;
-    while (c != NULL)
+    while (c != NULL) // 2
     {
         if (c == head && head->data > 0)
         {
             InsertBeg(head, 25); // Вставка перед head
-            c = c->next; // Повертаємося на те, на чому були
         }
         if (c->next != NULL && c->next->data > 0)
         {
@@ -170,7 +169,7 @@ void Task1()
 
     // Вилучення зі списку всіх від’ємних чисел
     c = head;
-    while (c != NULL)
+    while (c != NULL) // 3
     {
         if (c->data < 0)
         {

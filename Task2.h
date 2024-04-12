@@ -102,7 +102,7 @@ void Task2()
     //      З кожної пари сусідніх елементів вилучити менший за модулем
     Node* head = NULL, * end = NULL, * c;  double x;
     cout << "Input 10 elements:" << endl;
-    for (int i = 1; i <= 10; i++)
+    for (int i = 1; i <= 10; i++) // 1
     {
         cin >> x;
         if (head == NULL)
@@ -117,7 +117,7 @@ void Task2()
     Print_List(head);
 
     c = head;
-    do
+    do // 2
     {
         if (abs(c->data) < abs(c->next->data))
         {
@@ -137,6 +137,8 @@ void Task2()
     } while (c != head);
 
     Print_List(head);
+
+    cout << "\nend->next->data = " << end->next->data << endl;
 
 
     Free_Memory(head, end);
